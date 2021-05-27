@@ -51,5 +51,7 @@ jobs:
     - name: Install dependencies
       run: |
         go get github.com/franela/goblin
+        go mod init thetests
+        go mod tidy
         go test -v
         
