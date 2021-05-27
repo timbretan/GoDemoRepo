@@ -1,6 +1,6 @@
 name: CICD Notification to Telegram
 
-on: [push]
+on: [push, create, pull_request]
     
 jobs:
   build:
