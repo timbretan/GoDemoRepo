@@ -16,7 +16,7 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        args: The ${{ github.event_name }} event triggered first step.
+        args: There is a new ${{ github.event_name }} event to ${{ GITHUB_REPOSITORY }}.
 
     #- name: Notify on Telegram
       # You may pin to the exact commit or the version.
