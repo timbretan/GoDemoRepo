@@ -1,1 +1,14 @@
+name: CI Setup for Go
 
+on:
+  push:
+    branches: [main]
+    
+jobs:
+  my-job:
+    name: My Job
+    runs-on: ubuntu@latest
+    steps:
+      - name: Print a greeting
+        run: |
+          echo Hello there!
