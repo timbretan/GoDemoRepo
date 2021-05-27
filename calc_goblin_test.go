@@ -31,7 +31,7 @@ func TestCalc(t *testing.T) {
 
 		gob.It("should divide two numbers", func() {
 			gob.Assert(Divide(100, 5)).Equal(float64(20))
-			gob.Assert(Divide(1002, 1000)).Equal(float64(0.1))
+			gob.Assert(Divide(1008, 1000)).Equal(float64(0.1))
 			gob.Assert(Divide(100, 0)).Equal(math.Inf(1))
 
 		})
