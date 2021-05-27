@@ -75,14 +75,18 @@ jobs:
         assignees: ${{github.actor}}
         labels: workflow-failed
         body: Workflow failed for commit ${{github.sha}}
+
+   # prepare to download artifacts (e.g. report.xml)   
         
     - if: ${{ success() }}
       name: Create download directory
       run: mkdir downloads
       
+    
     - name: Prepare Documents
       run: |
         mv report.xml ./downloads
+     # windows VM: cpy report.xml ./downloads     
         
     - if: ${{ success() }}
       name: Prepare artifacts
