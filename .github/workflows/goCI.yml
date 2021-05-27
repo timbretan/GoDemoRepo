@@ -41,5 +41,9 @@ jobs:
         token: ${{ secrets.GO_REMOTE }} # `GitHub_PAT` is a secret that contains your PAT
     
     - name: Check files now
-      run: ls
+      run: |
+        ls
+        cd remoteRepo
+        ls
+        cd ..
         
