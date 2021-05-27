@@ -54,8 +54,8 @@ jobs:
         go get github.com/tebeka/go2xunit
         go mod init thetests
         go mod tidy
-        go test -v
         go test -v | go2xunit -output report.xml
+        go test -v
         ls
     
     - name: Publish Unit Test Results
